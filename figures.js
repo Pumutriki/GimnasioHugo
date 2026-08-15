@@ -126,13 +126,29 @@ const SCENE = {
     g.appendChild(line([[o.x + o.w - 12, o.y + 9], [o.x + o.w - 12, GROUND_Y]], 'scene', 4));
   },
 
-  pared: (g, o) => g.appendChild(line([[o.x, 10], [o.x, GROUND_Y]], 'scene', 4))
+  pared: (g, o) => g.appendChild(line([[o.x, 10], [o.x, GROUND_Y]], 'scene', 4)),
+
+  barraFija: (g, o) => {                   // barra de dominadas
+    g.appendChild(line([[o.x1, o.y], [o.x2, o.y]], 'scene', 5));
+    g.appendChild(line([[o.x1 + 4, o.y], [o.x1 + 4, GROUND_Y]], 'scene', 4));
+    g.appendChild(line([[o.x2 - 4, o.y], [o.x2 - 4, GROUND_Y]], 'scene', 4));
+  },
+
+  anclaje: (g, o) => {                     // sujeción de tobillos (curl nórdico)
+    g.appendChild(svgEl('rect', { x: o.x, y: o.y, width: o.w, height: 9, rx: 4, class: 'scene-fill' }));
+  },
+
+  colchoneta: (g, o) => {                  // colchoneta / esterilla
+    g.appendChild(svgEl('rect', { x: o.x, y: GROUND_Y - 5, width: o.w, height: 6, rx: 3, class: 'scene-fill' }));
+  }
 };
 
 /* --- Dibujo del muñeco -------------------------------------------------- */
 function drawPose(g, p, ex) {
   // material que va POR DETRÁS del cuerpo
   if (ex.gear === 'goma') g.appendChild(line([[200, 74], p.wristN], 'gear', 2.5));
+  if (ex.gear === 'goma-alta') g.appendChild(line([[204, 30], p.wristN], 'gear', 2.5));
+  if (ex.gear === 'goma-izq') g.appendChild(line([[16, 78], p.wristN], 'gear', 2.5));
   if (ex.gear === 'jalon') {
     const mx = (p.wristN[0] + p.wristF[0]) / 2, my = (p.wristN[1] + p.wristF[1]) / 2;
     g.appendChild(line([[118, 10], [mx, my]], 'gear', 2));
@@ -167,6 +183,12 @@ function drawPose(g, p, ex) {
       barbell(g, p.wristF, p.wristN, 22); break;
     case 'rodillo':
       g.appendChild(svgEl('circle', { cx: p.ankleN[0], cy: p.ankleN[1], r: 10, class: 'gear-fill' })); break;
+    case 'balon': {                               // balón medicinal entre las manos
+      const bx = (p.wristN[0] + p.wristF[0]) / 2, by = (p.wristN[1] + p.wristF[1]) / 2;
+      g.appendChild(svgEl('circle', { cx: bx, cy: by, r: 12, class: 'gear-fill' })); break;
+    }
+    case 'barra-espalda':                         // barra sobre los hombros (sentadilla)
+      barbell(g, p.wristF, p.wristN, 30); break;
   }
 }
 
