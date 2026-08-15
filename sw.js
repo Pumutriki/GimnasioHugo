@@ -1,5 +1,8 @@
-/* Service worker: la app funciona sin internet una vez abierta la primera vez */
-const CACHE = 'gimnasio-hugo-v1';
+/* Service worker
+   Estrategia: primero la red, y si no hay internet, lo guardado.
+   Así, cuando se sube una versión nueva a GitHub, al abrir la app ya sale
+   actualizada; y sin cobertura sigue funcionando con la última que se cargó. */
+const CACHE = 'gimnasio-hugo-v2';
 const ARCHIVOS = [
   './', './index.html', './styles.css', './figures.js', './data.js', './app.js',
   './manifest.json', './icon-192.png', './icon-512.png', './icon-512-maskable.png'
@@ -17,11 +20,15 @@ self.addEventListener('activate', e => {
 
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
+  if (new URL(e.request.url).origin !== location.origin) return;
+
   e.respondWith(
-    caches.match(e.request).then(hit => hit || fetch(e.request).then(res => {
-      const copia = res.clone();
-      caches.open(CACHE).then(c => c.put(e.request, copia)).catch(() => { });
-      return res;
-    }).catch(() => caches.match('./index.html')))
+    fetch(e.request)
+      .then(res => {
+        const copia = res.clone();
+        caches.open(CACHE).then(c => c.put(e.request, copia)).catch(() => { });
+        return res;
+      })
+      .catch(() => caches.match(e.request).then(hit => hit || caches.match('./index.html')))
   );
 });
