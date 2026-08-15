@@ -19,18 +19,20 @@ con ficha y dibujo de cada ejercicio, temporizadores y registro de los pesos que
 
 ## Cómo ponerla en el móvil de Hugo
 
-La forma más cómoda es publicarla en GitHub Pages y pasarle el enlace:
+Está publicada en el repositorio `Pumutriki/GimnasioHugo`. Para que Hugo la tenga en el móvil
+hace falta que el repositorio sea **público** (con cuenta gratuita, GitHub Pages no funciona
+en repositorios privados):
 
-1. En GitHub Desktop: **File → New repository**, nombre `gimnasio-hugo`, y elige como
-   carpeta local `C:\APPs CLAUDE\GimnasioHugo`.
-2. Haz el primer **Commit** y luego **Publish repository**. Puedes dejarlo privado de
-   momento, pero para que funcione GitHub Pages tiene que ser **público**.
-3. En github.com, dentro del repositorio: **Settings → Pages → Source: Deploy from a branch
-   → Branch: main / (root) → Save**.
-4. A los dos minutos tendrás la dirección `https://pumutriki.github.io/gimnasio-hugo/`.
-5. Hugo la abre en **Chrome** en su móvil, toca los tres puntitos de arriba a la derecha y
+1. En github.com, dentro del repositorio: **Settings → General → Danger Zone →
+   Change repository visibility → Change to public**.
+2. **Settings → Pages → Source: Deploy from a branch → Branch: main / (root) → Save**.
+3. A los dos minutos responde `https://pumutriki.github.io/GimnasioHugo/`.
+4. Hugo la abre en **Chrome** en su móvil, toca los tres puntitos de arriba a la derecha y
    elige **"Añadir a la pantalla de inicio"** (o "Instalar aplicación").
    Le queda como una app más, con su icono, y ya funciona sin datos.
+
+Cada vez que se cambie algo de la app, basta con hacer **Commit** y **Push** en GitHub Desktop:
+Pages se actualiza sola en un par de minutos.
 
 > Importante: que la abra siempre desde el icono instalado, no desde una pestaña nueva
 > cada vez, para que no le parezca que ha perdido los pesos apuntados.
