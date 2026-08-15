@@ -20,10 +20,29 @@ total el día 7 y el día 12. El día 13 (Fuerza C, la de potencia y lanzamiento
 después de un día de descanso, para hacerla con las piernas frescas.
 
 - **Fuerza A** — tren inferior y empuje (sentadilla, salto vertical, press banca, remo, búlgara).
-- **Fuerza B** — cadena posterior y tracción (peso muerto rumano, saltos laterales, dominadas,
-  press militar, curl nórdico).
-- **Fuerza C** — potencia y lanzamiento (balón medicinal rotacional y sobre la cabeza,
-  hip thrust, saltos al cajón, paseo del granjero).
+- **Fuerza B** — cadena posterior y tracción (aterrizajes a una pierna, peso muerto rumano,
+  saltos laterales, dominadas, press militar, curl nórdico).
+- **Fuerza C** — potencia y lanzamiento (salto de lanzamiento a una pierna, balón medicinal
+  rotacional y sobre la cabeza, hip thrust, saltos al cajón, multisaltos, paseo del granjero).
+
+### Pliometría
+
+Hay salto en las tres sesiones de fuerza, y está pensada para **extremo y lateral**, que son
+los puestos donde puede jugar Hugo: los dos despegan **a una pierna**, con la contraria al
+brazo de lanzar.
+
+| Sesión | Salto | Para qué |
+|---|---|---|
+| A | Salto vertical (CMJ) tras la sentadilla | Potencia bilateral, aprovechando el efecto de la sentadilla |
+| B | Aterrizaje a una pierna desde cajón | Prevención de rodilla: caer estable tras el contacto |
+| B | Salto lateral de patinador | Frenar y salir de lado, sobre una pierna |
+| C | Salto de lanzamiento a una pierna | El gesto de tiro: extremo y lateral |
+| C | Salto al cajón | Potencia vertical con aterrizaje suave |
+| C | Multisaltos horizontales | El vuelo del extremo hacia la portería |
+
+Volumen controlado: unos **120-135 contactos por semana** repartidos en 3 días. Es
+deliberadamente conservador para un chaval de 15-16 años que además hace sprints y
+cambios de dirección otros 3 días.
 - **Acondicionamiento** — todo intermitente, como el juego: fartlek, 4×4, 30/30,
   sprints repetidos, cambios de dirección y un último día de velocidad pura.
 

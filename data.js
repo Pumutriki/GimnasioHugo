@@ -337,12 +337,12 @@ const EJERCICIOS = {
   },
 
   paseoGranjero: {
-    id: 'paseoGranjero', nombre: 'Paseo del granjero (10 m)', lugar: 'Gimnasio', material: '2 mancuernas pesadas',
+    id: 'paseoGranjero', nombre: 'Paseo del granjero', lugar: 'Gimnasio', material: '2 mancuernas pesadas',
     musculos: 'Agarre, core, trapecio y piernas', registro: 'peso', gear: 'mancuernas-pesadas', tempo: 700,
     pasos: [
       'Coge una mancuerna pesada en cada mano, de pie y bien erguido.',
       'Hombros atrás y abajo, abdomen apretado, mirada al frente.',
-      'Camina 10 metros con pasos normales y firmes, sin correr ni balancear los brazos.',
+      'Camina la distancia marcada con pasos normales y firmes, sin correr ni balancear los brazos.',
       'Deja el peso en el suelo con la espalda recta (agachándote, no doblando la espalda).'
     ],
     errores: [
@@ -350,7 +350,7 @@ const EJERCICIOS = {
       'Inclinarte hacia un lado si un peso es mayor que el otro.',
       'Soltar las mancuernas de golpe al acabar.'
     ],
-    progresion: 'Apunta el peso de UNA mancuerna. Cuando termines los 10 m sin que se te abra la mano, sube kilos.',
+    progresion: 'Apunta el peso de UNA mancuerna. Cuando termines la distancia sin que se te abra la mano, sube kilos.',
     scene: [],
     poseA: P([108, 32], [108, 46], [108, 90], [[130, 68], [134, 94]], [[86, 68], [82, 94]], [[116, 118], [122, 148], [134, 150]], [[100, 118], [94, 148], [82, 150]], 9),
     poseB: P([108, 32], [108, 46], [108, 90], [[130, 68], [134, 94]], [[86, 68], [82, 94]], [[100, 118], [94, 148], [82, 150]], [[116, 118], [122, 148], [134, 150]], 9)
@@ -557,6 +557,66 @@ const EJERCICIOS = {
     scene: [{ t: 'cajon', x: 140, y: 110, w: 64 }],
     poseA: P([86, 52], [86, 66], [88, 102], [[72, 86], [62, 104]], [[78, 90], [68, 108]], [[104, 120], [88, 148], [100, 152]], [[98, 122], [82, 148], [94, 152]], 9),
     poseB: P([168, 42], [168, 56], [170, 88], [[182, 66], [188, 50]], [[156, 66], [150, 50]], [[178, 96], [172, 110], [184, 112]], [[162, 96], [166, 110], [178, 112]], 9)
+  },
+
+  saltoExtremo: {
+    id: 'saltoExtremo', nombre: 'Salto de lanzamiento (a una pierna)', lugar: 'Pista o gimnasio', material: 'Nada (o un balón)',
+    musculos: 'Potencia de salto a una pierna · gesto de tiro', registro: 'reps', tempo: 800,
+    pasos: [
+      'Da 2 o 3 pasos de carrera, ni más ni menos: aquí no se busca velocidad, se busca altura.',
+      'Despega con la pierna CONTRARIA al brazo de lanzar (si tira con la derecha, impulsa con la izquierda).',
+      'Sube con fuerza la rodilla del otro lado y estira el cuerpo en el aire, como en un tiro en suspensión.',
+      'Cae con las dos piernas, flexionando para amortiguar. Si caes a una, que sea con la rodilla firme y estable.'
+    ],
+    errores: [
+      'Despegar con la pierna del mismo lado que el brazo de lanzar: pierdes altura y giro.',
+      'Coger mucha carrera: con 2 o 3 pasos ya saltas todo lo que puedes.',
+      'Caer con las piernas rígidas o con la rodilla metida hacia dentro.'
+    ],
+    progresion: 'Es tu gesto: el salto del extremo y el del lateral salen de aquí. Haz todas las repeticiones al máximo y descansa entre ellas. Cuando lo domines, hazlo con balón y lanzando.',
+    scene: [],
+    poseA: P([76, 50], [80, 62], [98, 96], [[96, 44], [110, 30]], [[64, 74], [50, 64]], [[104, 120], [96, 148], [108, 152]], [[130, 100], [148, 118], [158, 114]], 9),
+    poseB: P([104, 26], [106, 38], [118, 74], [[122, 22], [138, 10]], [[96, 50], [82, 42]], [[126, 100], [122, 126], [134, 128]], [[146, 80], [162, 98], [172, 94]], 9)
+  },
+
+  multisaltos: {
+    id: 'multisaltos', nombre: 'Multisaltos horizontales', lugar: 'Pista o campo', material: 'Nada',
+    musculos: 'Potencia horizontal y estabilidad de rodilla', registro: 'reps', tempo: 700,
+    pasos: [
+      'Sales andando un par de pasos y encadenas saltos alternos de pierna a pierna, buscando distancia.',
+      'Cada salto: rodilla libre arriba, brazos acompañando en oposición al gesto de la pierna.',
+      'Aterriza con todo el pie, la rodilla firme, y sal enseguida hacia el siguiente salto.',
+      'Haz 5 saltos, para, vuelve andando y repite. No es correr a saltos: es saltar lo más lejos posible.'
+    ],
+    errores: [
+      'Saltitos cortos y rápidos: si no ganas distancia, no es un multisalto.',
+      'Que la rodilla ceda hacia dentro al aterrizar.',
+      'Encadenar series sin descansar: en cuanto pierdes distancia, se acabó.'
+    ],
+    progresion: 'Esto es lo que le da al extremo el vuelo hacia la portería. Marca la distancia total de los 5 saltos y trata de superarla.',
+    scene: [],
+    poseA: P([70, 44], [74, 58], [92, 92], [[96, 70], [110, 54]], [[56, 76], [42, 64]], [[124, 104], [148, 122], [160, 118]], [[76, 116], [56, 132], [44, 128]], 9),
+    poseB: P([124, 40], [128, 54], [146, 88], [[122, 74], [106, 60]], [[160, 66], [174, 52]], [[130, 110], [108, 126], [96, 122]], [[180, 102], [202, 120], [212, 116]], 9)
+  },
+
+  aterrizajeUnaPierna: {
+    id: 'aterrizajeUnaPierna', nombre: 'Aterrizaje a una pierna', lugar: 'Gimnasio', material: 'Cajón bajo (30-40 cm)',
+    musculos: 'Prevención de rodilla · control del aterrizaje', registro: 'reps', tempo: 900,
+    pasos: [
+      'Ponte de pie encima de un cajón BAJO, con las manos libres.',
+      'Déjate caer hacia delante (no saltes) y cae sobre UNA sola pierna.',
+      'Amortigua flexionando cadera, rodilla y tobillo, con la rodilla mirando hacia la punta del pie.',
+      'Quédate quieto 3 segundos antes de moverte. Si te tambaleas, el cajón es demasiado alto.'
+    ],
+    errores: [
+      'Que la rodilla se meta hacia dentro al caer: eso es exactamente lo que rompe el ligamento cruzado.',
+      'Caer con la pierna estirada y hacer ruido: hay que aterrizar en silencio.',
+      'Usar un cajón alto para presumir. Aquí menos es más.'
+    ],
+    progresion: 'Es el ejercicio más importante para un extremo, que aterriza mil veces desequilibrado después del contacto. Cuando aguantes 3 segundos clavado en todas las repeticiones, sube un poco el cajón.',
+    scene: [{ t: 'cajon', x: 16, y: 120, w: 62 }],
+    poseA: P([46, 24], [46, 38], [46, 74], [[58, 56], [62, 76]], [[34, 56], [30, 76]], [[48, 98], [46, 120], [58, 122]], [[44, 98], [42, 120], [54, 122]], 9),
+    poseB: P([124, 52], [126, 66], [130, 100], [[146, 84], [158, 72]], [[108, 88], [96, 76]], [[136, 124], [132, 150], [144, 152]], [[152, 110], [166, 128], [176, 124]], 9)
   },
 
   saltoLateral: {
@@ -805,6 +865,7 @@ const CAL_FUERZA = [
   'Movilidad: 10 balanceos de pierna por lado + 10 sentadillas profundas sin peso.',
   'Activación de glúteo: 15 pasos laterales con goma por encima de las rodillas.',
   'Hombro: 15 rotaciones externas con goma suave. Esto nunca se salta.',
+  '15 pogos (saltitos seguidos de tobillo, sin doblar apenas la rodilla) para despertar el pie.',
   '2 series de aproximación del primer ejercicio, con poco peso.'
 ];
 
@@ -837,6 +898,7 @@ const SESIONES = {
     calentamiento: CAL_FUERZA,
     nota: 'Hoy entra el curl nórdico. Vas a tener agujetas en los isquios 2 días: es normal la primera semana.',
     ejercicios: [
+      E('aterrizajeUnaPierna', 3, '3 por pierna', 60, 'Nada más calentar, con las piernas frescas. Quieto 3 segundos en cada caída.'),
       E('pesoMuertoBarra', 4, '8', 150),
       E('saltoLateral', 4, '4 por lado', 90, 'Aterriza y quédate quieto un segundo en cada salto.'),
       E('dominadas', 4, 'las que salgan menos 1', 120, 'Si no salen, con goma o bajando frenado 4 segundos.'),
@@ -851,11 +913,12 @@ const SESIONES = {
     calentamiento: CAL_FUERZA,
     nota: 'Sesión de velocidad, no de sufrir. Cada lanzamiento y cada salto, al máximo, y descansa entre repeticiones.',
     ejercicios: [
+      E('saltoExtremo', 4, '3 por pierna', 90, 'Lo primero del día, fresco: es tu gesto de tiro.'),
       E('lanzamientoRotacional', 4, '5 por lado', 60, 'Apunta en los kilos el peso del balón.'),
       E('lanzamientoCabeza', 4, '5', 60),
       E('hipThrust', 4, '8', 120),
       E('saltoCajon', 4, '4', 90, 'Baja del cajón andando, nunca saltando.'),
-      E('subidaCajon', 3, '8 por pierna', 90),
+      E('multisaltos', 3, '5 saltos', 90, 'Busca distancia en cada salto, no ir rápido.'),
       E('paseoGranjero', 3, '20 metros', 90),
       E('deadBug', 3, '8 por lado', 45)
     ]
@@ -881,6 +944,7 @@ const SESIONES = {
     calentamiento: CAL_FUERZA,
     nota: 'El peso muerto rumano tiene que notarse en la parte de atrás del muslo, no en la espalda baja.',
     ejercicios: [
+      E('aterrizajeUnaPierna', 3, '4 por pierna', 60, 'Si la semana pasada te quedabas clavado, sube un poco el cajón.'),
       E('pesoMuertoBarra', 4, '6', 180),
       E('saltoLateral', 4, '5 por lado', 90),
       E('dominadas', 4, '6', 120),
@@ -893,13 +957,14 @@ const SESIONES = {
   fC2: {
     tipo: 'fuerza', nombre: 'Fuerza C', foco: 'Potencia y lanzamiento',
     calentamiento: CAL_FUERZA,
-    nota: 'Si notas que lanzas o saltas más flojo que al principio de la serie, corta y descansa más.',
+    nota: 'Si notas que lanzas o saltas más flojo que al principio de la serie, corta y descansa más. Hoy llegas descansado del día de ayer: aprovéchalo.',
     ejercicios: [
+      E('saltoExtremo', 5, '3 por pierna', 90, 'Hoy con balón, lanzando a portería si puedes.'),
       E('lanzamientoRotacional', 5, '5 por lado', 60),
       E('lanzamientoCabeza', 5, '5', 60),
       E('hipThrust', 4, '6', 150),
       E('saltoCajon', 5, '3', 90),
-      E('subidaCajon', 3, '8 por pierna', 90),
+      E('multisaltos', 3, '5 saltos', 90, 'Marca la distancia total y trata de superar la de la semana pasada.'),
       E('paseoGranjero', 3, '25 metros', 90),
       E('deadBug', 3, '10 por lado', 45)
     ]
